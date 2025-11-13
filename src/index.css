@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+@font-face {
+  font-family: 'Vazir';
+  src: url('./fonts/Vazir.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@import "tailwindcss";
+
+.vazirmatn {
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+div{
+  font-family: Vazirmatn
+}
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-blue-600 hover:text-blue-800 dark:text-blue-400 transition;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-blue-400 opacity-70;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-600 opacity-100;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
