@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 @font-face {
   font-family: 'Vazir';
@@ -6,6 +8,25 @@
   font-style: normal;
 }
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
 
 .vazirmatn {
   font-family: "Vazirmatn", sans-serif;
@@ -16,17 +37,32 @@
 div{
   font-family: Vazirmatn
 }
-.swiper-button-next,
-.swiper-button-prev {
-  @apply text-blue-600 hover:text-blue-800 dark:text-blue-400 transition;
+.swiper-button-prev,
+.swiper-button-next {
+  color: #2563eb;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #2563eb;
+  color: white;
 }
 
 .swiper-pagination-bullet {
-  @apply bg-blue-400 opacity-70;
+  background-color: #93c5fd;
+  opacity: 0.6;
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-blue-600 opacity-100;
+  background-color: #2563eb;
+  opacity: 1;
 }
 
 @tailwind base;
